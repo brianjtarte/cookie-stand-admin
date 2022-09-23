@@ -1,8 +1,8 @@
 
-export default function CreateForm(props) {
+export default function CookieForm(props) {
 
   return(
-    <form onSubmit={props.handleCreate} className="w-11/12 px-3 pb-2 mx-auto text-sm text-black rounded-lg bg-lightGreen mt-7">
+    <form onSubmit={props.handleCreate} className="w-11/12 text-black rounded-lg bg-lightGreen mt-7 px-3 pb-2 mx-auto text-sm ">
       <h2 className="p-3 text-xl font-strong text-center">Create Cookie Stand</h2>
         <div className="flex m-2">
           <label className="pr-2">Location</label>
@@ -29,7 +29,7 @@ export default function CreateForm(props) {
 
           </input>
         </div>
-        <div className="flex items-center justify-center w-1/4 p-2 mx-1 my-2 bg-darkGreen">
+        <div className="mx-1 my-2 bg-darkGreen flex items-center justify-center w-1/4 p-2 ">
           <button className="w-1/4 mx-1 bg-darkGreen" type="submit">
           Create
           </button>
