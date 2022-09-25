@@ -12,7 +12,8 @@ module.exports = {
         'lightGreen' : '#6fe6b7',
         'bodyColor' : '#ECFDF5',
         'black' : '#000000',
-        'locationColor' : '#e2ebfe'
+        'locationColor' : '#e2ebfe',
+        'mediumGreen' : '#35D399'
       }
   },
   plugins: [],

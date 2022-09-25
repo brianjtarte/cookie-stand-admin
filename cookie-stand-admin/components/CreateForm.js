@@ -1,5 +1,5 @@
 
-export default function CookieForm(props) {
+export default function CreateForm(props) {
 
   return(
     <form onSubmit={props.handleCreate} className="w-11/12 text-black rounded-lg bg-lightGreen mt-7 px-3 pb-2 mx-auto text-sm ">
