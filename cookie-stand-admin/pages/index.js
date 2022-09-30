@@ -4,9 +4,18 @@ import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
 import { useState } from 'react';
-import { hours } from '../data'
+import { hours } from '../data';
+import { useAuth } from '../contexts/auth';
+import useResource from '../hooks/useResource';
+
 
 export default function Home() {
+
+    const { user, login, logout } = useAuth();
+
+    function loginHandler(newUser) {
+        login(newUser.username, newUser.password);
+    }
 
     const [cookieStoreData, setCookieStoreData] = useState([]);
 
@@ -19,26 +28,11 @@ export default function Home() {
             maxCustPerHour:event.target.maxCustPerHour.value,
             avgCookiesPerSale:event.target.avgCookiesPerSale.value,
             hourly_sales: [48, 42, 30, 24, 42, 24, 36, 42, 42, 48, 36, 42, 24, 36],
-            // customerPerHour: [],
             id: cookieStoreData.length,
-
         };
 
         setCookieStoreData([...cookieStoreData, cookieStoreList]);
 
-        //     function getRandomCustomer(minCustPerHour, maxCustPerHour){
-        //      let randomNumber = Math.floor(Math.random() * (maxCustPerHour - minCustPerHour + 1) + minCustPerHour);
-        //     return randomNumber;
-        // }
-        //
-        //     function renderCustomerPerHour(minCustPerHour, maxCustPerHour){
-        //         let num = getRandomCustomer(minCustPerHour, maxCustPerHour)
-        //         hours.map ((time) => (time = cookieStoreList.customerPerHour.push(num)))
-        //     }
-        //
-        //     function renderCookiesSold(){
-        //         cookieStoreList.customerPerHour.map(x => )
-        //     }
     }
 
   return (
@@ -49,8 +43,6 @@ export default function Home() {
         <Header />
         <Main handleCreate={handleCreate} cookieStoreData={cookieStoreData} hours={hours} />
         <Footer locationData={cookieStoreData.length} />
-
-
 
     </div>
   )
