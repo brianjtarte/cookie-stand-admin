@@ -5,7 +5,7 @@ export default function Footer(props) {
             <h1 className="small">
                 ©2021
             </h1>
-            <p>Total Locations={props.cookieStoreData.id}</p>
+            {/*<p>Total Locations={props.cookieStoreData.id}</p>*/}
         </footer>
     )
 }
