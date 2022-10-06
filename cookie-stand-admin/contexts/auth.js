@@ -14,7 +14,7 @@ export function useAuth() {
 
     const auth = useContext(AuthContext);
     if (!auth) {
-        throw new Error("You forgot to set up AuthProvider!");
+        throw new Error("You forgot to set up your AuthProvider!");
     }
 
     return auth;
